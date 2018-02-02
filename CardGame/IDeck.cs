@@ -10,6 +10,5 @@ namespace CardGame
     {
         void DealCard(IPlayer player);
         void Shuffle(); // ??
-        List<ICard> Cards { get; }
     }
 }

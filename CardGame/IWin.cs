@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CardGame
 {
-    class IWin
+    public interface IWin
     {
+        IPlayer GetWinner(List<IPlayer> players);
     }
 }

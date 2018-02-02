@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CardGame
 {
-    class Game
+    public class Game
     {
+       
     }
 }
