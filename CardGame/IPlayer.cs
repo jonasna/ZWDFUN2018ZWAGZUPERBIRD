@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace CardGame
 {
-    class IPlayer
+    public interface IPlayer
     {
+        List<ICard> CardsOnHand { get; set; }
+        string Name { get; }
     }
 }

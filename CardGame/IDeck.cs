@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace CardGame
 {
-    class IDeck
+    public interface IDeck
     {
+        void DealCard(IPlayer player);
+        void Shuffle(); // ??
+        List<ICard> Cards { get; }
     }
 }
