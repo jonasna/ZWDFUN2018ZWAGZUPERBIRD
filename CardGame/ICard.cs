@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace CardGame
 {
-    class ICard
+    public interface ICard
     {
+        int Value { get; }
+        int Number { get; }
+        IColor Color { get; }
     }
 }

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace CardGame
 {
-    class IColor
+    public interface IColor
     {
+        int Multipler { get; }
+        string ToString();
     }
 }
