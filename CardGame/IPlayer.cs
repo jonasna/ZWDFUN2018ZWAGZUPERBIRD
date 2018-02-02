@@ -8,7 +8,8 @@ namespace CardGame
 {
     public interface IPlayer
     {
-        List<ICard> CardsOnHand { get; set; }
+        void ReceiveCard(ICard card);
+        List<ICard> ShowHand();
         string Name { get; }
     }
 }
