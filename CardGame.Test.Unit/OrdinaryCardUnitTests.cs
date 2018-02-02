@@ -31,11 +31,26 @@ namespace CardGame.Test.Unit
             Assert.That(uut.Number, Is.EqualTo(1));
         }
 
-        [Test]
-        public void ToString_RedCardFive_FormatIsCorrect()
+        public struct Format
         {
-            var uut = new OrdinaryCard(new RedColor(), 5);
-            Assert.That(uut.ToString(), Is.EqualTo("Red 5"));
+            public IColor _color;
+            public string _name;
+
+        }
+
+        private static Format[] CardPrintCases =
+        {
+            new Format(){_color = new RedColor(), _name = "Red"},
+            new Format(){_color = new BlueColor(), _name = "Blue"},
+            new Format(){_color = new GreenColor(), _name = "Green"},
+            new Format(){_color = new YellowColor(), _name = "Yellow"},
+        };
+
+        [TestCaseSource(nameof(CardPrintCases))]
+        public void ToString_AllColors_FormatIsCorrect(Format format)
+        {
+            var uut = new OrdinaryCard(format._color, 5);
+            Assert.That(uut.ToString(), Is.EqualTo(format._name + " " + 5));
         }
 
         [Test]
@@ -43,6 +58,27 @@ namespace CardGame.Test.Unit
         {
             var uut = new OrdinaryCard(new RedColor(), 5);
             Assert.That(uut.Value, Is.EqualTo(5));
+        }
+
+        [Test]
+        public void GetValue_BlueCardFive_ReturnIs10()
+        {
+            var uut = new OrdinaryCard(new BlueColor(), 5);
+            Assert.That(uut.Value, Is.EqualTo(10));
+        }
+
+        [Test]
+        public void GetValue_GreenCardFive_ReturnIs15()
+        {
+            var uut = new OrdinaryCard(new GreenColor(), 5);
+            Assert.That(uut.Value, Is.EqualTo(15));
+        }
+
+        [Test]
+        public void GetValue_YellowCardFive_ReturnIs20()
+        {
+            var uut = new OrdinaryCard(new YellowColor(), 5);
+            Assert.That(uut.Value, Is.EqualTo(20));
         }
     }
 }

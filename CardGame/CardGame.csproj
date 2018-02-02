@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlueColor.cs" />
+    <Compile Include="GreenColor.cs" />
     <Compile Include="ICard.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="IColor.cs" />
@@ -49,6 +51,7 @@
     <Compile Include="OrdinaryCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RedColor.cs" />
+    <Compile Include="YellowColor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

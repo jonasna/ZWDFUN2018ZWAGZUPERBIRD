@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CardGame
 {
-    public struct RedColor : IColor
+    public struct GreenColor : IColor
     {
-        public int Multipler => 1;
+        public int Multipler => 3;
         public override string ToString()
         {
-            return "Red";
+            return "Green";
         }
     }
 }
