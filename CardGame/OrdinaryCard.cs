@@ -11,7 +11,7 @@ namespace CardGame
         public OrdinaryCard(IColor color, int number)
         {
             Color = color;
-            Number = number;
+            Number = (number > 0 && number < 9) ? number : 1;
         }
 
         public int Value => Color.Multipler * Number;
