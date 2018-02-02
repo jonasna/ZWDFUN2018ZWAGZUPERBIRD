@@ -9,6 +9,5 @@ namespace CardGame
     public interface IColor
     {
         int Multipler { get; }
-        string ToString();
     }
 }

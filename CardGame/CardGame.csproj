@@ -46,6 +46,7 @@
     <Compile Include="IDeck.cs" />
     <Compile Include="IPlayer.cs" />
     <Compile Include="IWin.cs" />
+    <Compile Include="OrdinaryCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
